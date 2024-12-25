@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if data %}
+        <table border="2">
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>password</td>
+                <td>Delete</td>
+            </tr>
+            {% for i in data %}
+                <tr>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.password }}</td>
+                    <td><a href="/delete?del={{i.id}}" id="delete">Delete</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No Data available</p>
+    {% endif %}
+        <a href="/">Add New Record</a>
+</body>
+</html>
