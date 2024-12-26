@@ -22,5 +22,6 @@ urlpatterns = [
     path("",views.data_input),
     path("get/", views.data_view),
     path("delete/", views.deletedata),
+    path("update", views.updatedata),
     path("admin/", admin.site.urls),
 ]

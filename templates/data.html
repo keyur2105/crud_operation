@@ -13,6 +13,7 @@
                 <td>name</td>
                 <td>password</td>
                 <td>Delete</td>
+                <td>Update</td>
             </tr>
             {% for i in data %}
                 <tr>
@@ -20,6 +21,7 @@
                     <td>{{ i.name }}</td>
                     <td>{{ i.password }}</td>
                     <td><a href="/delete?del={{i.id}}" id="delete">Delete</a></td>
+                    <td><a href="/update?update={{i.id}}" id="update">Update</a></td>
                 </tr>
             {% endfor %}
         </table>

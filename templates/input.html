@@ -7,8 +7,8 @@
 </head>
 <body>
     <form action="/get">
-        name : <input type="text" name="name" id="">
-        password : <input type="password" name="pw" id="">
+        name : <input type="text" name="name" value = "{% if f_data %}{{f_data.name}}{% endif%}" required>
+        password : <input type="password" name="pw" value = "{% if f_data %}{{f_data.password}}{% endif%}" required>
         <button name="submit">submit</button>
     </form>
 
